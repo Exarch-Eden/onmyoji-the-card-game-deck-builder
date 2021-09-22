@@ -1,0 +1,14 @@
+nav {
+  display: flex;
+  flex-direction: row;
+}
+
+.Link {
+  text-decoration: none;
+}
+
+.NavLink {
+  color: var(--light);
+  margin: 0 20px;
+  padding: 10px 0;
+}
