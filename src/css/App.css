@@ -1,0 +1,41 @@
+:root {
+  --dark: #0a0a0b;
+  --dark-grey: #524f60;
+  --light-grey: #6b6b7a;
+  --light: #fff;
+}
+
+/* -------------------------------------------- */
+/* App.tsx specific styles */
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  background-color: var(--dark-grey);
+}
+
+header {
+  background-color: var(--light-grey);
+}
+
+main {
+  
+}
+
+footer {
+  margin-top: auto;
+  background-color: var(--light-grey);
+  color: var(--light);
+}
+
+/* -------------------------------------------- */
+/* Universal styles */
+.Padded {
+  padding: 10px;
+}
+
+.LightText {
+  color: var(--light)
+}
