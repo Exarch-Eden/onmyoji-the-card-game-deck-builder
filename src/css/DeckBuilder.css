@@ -1,0 +1,15 @@
+.DeckBuilderContainer {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+.DeckBuilderLeft {
+    flex: 1;
+    border: 1px solid red;
+}
+
+.DeckBuilderRight {
+    flex: 2;
+    border: 1px solid blue;
+}
