@@ -1,8 +1,28 @@
 .Card {
+    position: relative;
     border: 1px solid white;
+    width: 320px;
+    height: 480px;
+}
+
+.CombatCard {
+    clip-path: polygon(50% 0%, 100% 12%, 100% 100%, 0 100%, 0 12%);
 }
 
 .CardImage {
-    width: 351px;
-    height: 609px;
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 320px;
+    height: 480px;
+    /* width: 351px;
+    height: 609px; */
+}
+
+.CardTop {
+    position: absolute;
+    top: 0;
+    border: 1px solid blue;
+    width: '100%';
+    height: 60px;
 }
