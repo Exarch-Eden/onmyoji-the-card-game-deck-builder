@@ -5,9 +5,10 @@ import '../css/DeckBuilder.css';
 import { CardInfo } from '../types';
 
 const CardInfoTest: CardInfo = {
-    name: 'Akaname',
+    name: 'Sparkling Bubbles',
+    shikigamiName: 'Akaname',
     desc: 'Description',
-    type: 'Combat',
+    type: 'Field',
     imageSrc: './images/akaname/2.jpg'
 };
 
