@@ -11,5 +11,11 @@
 
 .DeckBuilderRight {
     flex: 7;
-    border: 1px solid blue;
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    padding: 10px;
 }
+
+/* Add media query for .DeckBuilderRight */
+/* Change overflow to y instead of x */
