@@ -23,7 +23,11 @@ const Card: FC<CardInfo> = ({ name, shikigamiName, desc, imageSrc, type }) => {
                     src={imageSrc}
                     alt={`${name} Card`}
                 />
-                {renderDescContainer(type, desc)}
+                <div className="CardDescriptionContainer">
+                    <p className="CardName">{name}</p>
+                    <p className="CardDescriptionText">{desc}</p>
+                    {renderDescBackground(type)}
+                </div>
                 <div className="CardBottom">
                     <p>
                         {shikigamiName} - {type === "Evolve" ? "Spell" : type}
@@ -34,19 +38,19 @@ const Card: FC<CardInfo> = ({ name, shikigamiName, desc, imageSrc, type }) => {
     );
 };
 
-const renderDescContainer = (type: CardType, desc: string) => {
-    const cName = "CardDescription";
+const renderDescBackground = (type: CardType) => {
+    const cName = "CardDescriptionBackground";
     const alt = "Description Container";
 
     if (type === "Shikigami" || type === "Form") {
-        return <img className={cName} src={ASSETS.formDesc} alt={alt}></img>;
+        return <img className={cName} src={ASSETS.formDesc} alt={alt} />;
     } else if (type === "Combat") {
-        return <img className={cName} src={ASSETS.combatDesc} alt={alt}></img>;
+        return <img className={cName} src={ASSETS.combatDesc} alt={alt} />;
     } else if (type === "Field") {
-        return <img className={cName} src={ASSETS.fieldDesc} alt={alt}></img>;
+        return <img className={cName} src={ASSETS.fieldDesc} alt={alt} />;
     } else {
         // Evolve or Spell types
-        return <img className={cName} src={ASSETS.spellDesc} alt={alt}></img>;
+        return <img className={cName} src={ASSETS.spellDesc} alt={alt} />;
     }
 };
 

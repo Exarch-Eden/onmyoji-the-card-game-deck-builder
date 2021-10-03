@@ -13,7 +13,7 @@
 
 .CardBackground,
 .FieldCardTop,
-.CardDescription,
+.CardDescriptionBackground,
 .CardBottom {
     background-color: var(--card-border);
 }
@@ -80,14 +80,35 @@
     z-index: 10;
 }
 
-.CardDescription {
-    z-index: 30;
-    background-color: transparent;
+.CardDescriptionContainer {
     position: absolute;
     width: 100%;
-    height: 40%;
+    height: 30%;
     left: 0;
     bottom: 5%;
+    z-index: 30;
+    display: flex;
+    justify-content: center;
+}
+
+.CardDescriptionBackground {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+}
+
+.CardName {
+    position: absolute;
+    z-index: 50;
+    top: 0;
+}
+
+.CardDescriptionText {
+    position: absolute;
+    z-index: 50;
+    max-width: 90%;
+    top: 1em;
+    padding: 5px;
 }
 
 .CardBottom {
