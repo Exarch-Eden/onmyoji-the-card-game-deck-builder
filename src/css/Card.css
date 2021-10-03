@@ -1,12 +1,27 @@
 .Card {
     position: relative;
-    border: 1px solid white;
+    /* width: 320px;
+    height: 480px; */
+}
+
+.Card, .CardBackground {
     width: 320px;
     height: 480px;
 }
 
+.CardBackground {
+    margin: 5px;
+    padding: 2px;
+    background-color: white;
+    text-align: center;
+}
+
 .CombatCard {
     clip-path: polygon(50% 0%, 100% 12%, 100% 100%, 0 100%, 0 12%);
+}
+
+.SpellCard, .EvolveCard {
+    clip-path: polygon(10% 0, 90% 0, 100% 7%, 100% 100%, 0 100%, 0 7%);
 }
 
 .CardImage {

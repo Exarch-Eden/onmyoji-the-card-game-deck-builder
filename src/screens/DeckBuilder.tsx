@@ -7,7 +7,7 @@ import { CardInfo } from '../types';
 const CardInfoTest: CardInfo = {
     name: 'Akaname',
     desc: 'Description',
-    type: 'Spell',
+    type: 'Combat',
     imageSrc: './images/akaname/2.jpg'
 };
 
