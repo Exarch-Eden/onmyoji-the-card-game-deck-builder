@@ -1,43 +1,112 @@
 .Card {
     position: relative;
-    /* width: 320px;
-    height: 480px; */
+    text-align: center;
 }
 
-.Card, .CardBackground {
-    width: 320px;
+/* 320px x 480px */
+
+.Card,
+.CardBackground {
+    width: 240px;
     height: 480px;
 }
 
+.CardBackground,
+.FieldCardTop,
+.CardDescription,
+.CardBottom {
+    background-color: var(--card-border);
+}
+
+/* Sole purpose is to create the border around the actual Card component */
 .CardBackground {
     margin: 5px;
+    /* Value determines how thick the "border" is */
     padding: 2px;
-    background-color: white;
-    text-align: center;
+    display: flex;
+    align-items: center;
 }
 
 .CombatCard {
     clip-path: polygon(50% 0%, 100% 12%, 100% 100%, 0 100%, 0 12%);
 }
 
-.SpellCard, .EvolveCard {
-    clip-path: polygon(10% 0, 90% 0, 100% 7%, 100% 100%, 0 100%, 0 7%);
+.SpellCard,
+.EvolveCard {
+    clip-path: polygon(10% 0, 90% 0, 100% 5%, 100% 100%, 0 100%, 0 5%);
+}
+
+.FormCard,
+.ShikigamiCard {
+    clip-path: circle(75% at 50% 65%);
+}
+
+.FieldCard {
+    /* x, y */
+    /* 0 - 100%, 0 - 100% */
+
+    clip-path: polygon(
+        0% 0%,
+        10% 2%,
+        90% 2%,
+        100% 0%,
+        99% 2%,
+        98% 2.5%,
+        97% 3%,
+        95% 5%,
+        95% 100%,
+        5% 100%,
+        5% 5%,
+        3% 3%,
+        2% 2.5%,
+        1% 2%,
+        0% 0%
+    );
+}
+
+.FieldCardTop {
+    position: absolute;
+    width: 100%;
+    height: 5%;
+    z-index: 30;
 }
 
 .CardImage {
     top: 0;
     left: 0;
     position: absolute;
-    width: 320px;
-    height: 480px;
-    /* width: 351px;
-    height: 609px; */
+    width: 240px;
+    height: 360px;
+    z-index: 10;
 }
 
-.CardTop {
+.CardDescription {
+    z-index: 30;
+    background-color: transparent;
     position: absolute;
-    top: 0;
-    border: 1px solid blue;
-    width: '100%';
-    height: 60px;
+    width: 100%;
+    height: 40%;
+    left: 0;
+    bottom: 5%;
+}
+
+.CardBottom {
+    z-index: 30;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 5%;
+    max-height: 20px;
+    min-height: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.CardBottom > p {
+    z-index: 50;
+    color: black;
+    font-size: 0.75em;
 }
