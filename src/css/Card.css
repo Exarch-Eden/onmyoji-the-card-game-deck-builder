@@ -38,7 +38,9 @@
 
 .FormCard,
 .ShikigamiCard {
-    clip-path: circle(75% at 50% 65%);
+    /* clip-path: circle(75% at 50% 60%); */
+    clip-path: circle(farthest-side at 50% 55%);
+    /* clip-path: inset(0 0 0 0 round 50% 50% 0% 0%); */
 }
 
 .FieldCard {
@@ -109,6 +111,42 @@
     max-width: 90%;
     top: 1em;
     padding: 5px;
+}
+
+.CardStatContainer {
+    position: absolute;
+    z-index: 50;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.LeftStatValue, .RightStatValue {
+    position: absolute;
+    color: white;
+    bottom: 0%;
+    font-size: 24px;
+}
+
+.LeftStatValue {
+    left: 0;
+    margin-left: 15px;
+}
+
+.RightStatValue {
+    right: 0;
+    margin-right: 15px;
+}
+
+.LeftStatIcon {
+    margin-left: -5px;
+}
+
+.RightStatIcon {
+    margin-right: -5px;
 }
 
 .CardBottom {
