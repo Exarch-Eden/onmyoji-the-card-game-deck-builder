@@ -124,21 +124,24 @@
     width: 100%;
 }
 
-.LeftStatValue, .RightStatValue {
-    position: absolute;
+.StatContainer {
+    width: 54px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.StatValue {
     color: white;
-    bottom: 0%;
     font-size: 24px;
 }
 
-.LeftStatValue {
-    left: 0;
-    margin-left: 15px;
-}
-
-.RightStatValue {
-    right: 0;
-    margin-right: 15px;
+.LeftStatValue, .RightStatValue {
+    /* position: absolute; */
+    color: white;
+    /* bottom: 0%; */
+    font-size: 24px;
 }
 
 .LeftStatIcon {
