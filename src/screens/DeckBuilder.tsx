@@ -86,6 +86,7 @@ const CardInfoTest: CardInfo = {
     imageSrc: "./images/good-or-evil/akaname/2.jpg",
 };
 
+// TODO: save builder data to redux (persist throughout current session rather than resetting on screen change)
 const DeckBuilder = () => {
     return (
         <div className="DeckBuilderContainer">

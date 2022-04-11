@@ -4,6 +4,7 @@ import { CardInfo, CardType, StatInfo } from "../types";
 import "../css/Card.css";
 
 import ASSETS from "../assets/assets";
+import StatContainer from "./StatContainer";
 
 const Card: FC<CardInfo> = ({
     name,
@@ -37,18 +38,14 @@ const Card: FC<CardInfo> = ({
                     {renderDescBackground(type)}
                 </div>
                 <div className="CardStatContainer">
-                    {leftStat ? (
-                        <div className="LeftStat">
-                            <img className="LeftStatIcon" src={renderStatIcon(leftStat)} alt="Left Stat Icon" />
-                            <p className="LeftStatValue">{leftStat?.statValue}</p>
-                        </div>
-                    ) : null}
-                    {rightStat ? (
+                    {leftStat ? <StatContainer stat={leftStat} placement='left' /> : null}
+                    {rightStat ? <StatContainer stat={rightStat} placement='right' /> : null}
+                    {/* {rightStat ? (
                         <div className="RightStat">
                             <img className="RightStatIcon" src={renderStatIcon(rightStat)} alt="Right Stat Icon" />
                             <p className="RightStatValue">{leftStat?.statValue}</p>
                         </div>
-                    ) : null}
+                    ) : null} */}
                 </div>
                 <div className="CardBottom">
                     <p>
